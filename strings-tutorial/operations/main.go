@@ -26,4 +26,13 @@ func main() {
 	p(s.Split("cat goes meow", "goes"))   // ["cat", "meow"]
 	p(s.ToLower("OMG YOU NOOB"))
 	p(s.ToUpper("many whelps, handle it!"))
+
+	print("SplitN example:")
+	sampleString := "cat=meow=dog=woof"
+	// extract a maximum of 3 elements (place remainder in the last one)
+	splitResult := s.SplitN(sampleString, "=", 3)
+	print("\n")
+	for _, item := range splitResult {
+		print(item, "\n")
+	}
 }
